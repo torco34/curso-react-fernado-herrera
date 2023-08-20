@@ -1,15 +1,14 @@
 import { useState } from "react";
 
 import "./App.css";
-import {  } from "./component/tes/Tes";
+import { Index } from "./component/repasoDeJs/Index";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Tes />
-      Hero
+      <Index />
     </>
   );
 }
