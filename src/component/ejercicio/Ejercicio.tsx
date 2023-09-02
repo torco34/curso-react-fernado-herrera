@@ -6,7 +6,7 @@ export const Ejercicio = ({ title, suma }) => {
         <>
             este es un ejercicio
             <p>{title}</p> suma:{suma}
-            <Ejercicio2 value={3 + 5 + 6} />
+            <Ejercicio2 value={0} />
         </>
     )
 }
