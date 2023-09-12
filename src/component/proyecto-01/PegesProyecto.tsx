@@ -1,21 +1,27 @@
 import React, { useState } from 'react'
-
-const PegesProyecto = () => {
-  const [array, setArray] = useState(["hola mundo", "este es mi "])
+import { Categoris } from './categori/Categoris'
+interface Props {
+  
+}
+export const PegesProyecto = ({ }: Props) => {
+  const [categories, setCategories] = useState<string[]>(["titulo 1", "titulo2", "titulo 3"])
 
   //calmekey
-  const hendleAgregar = () => {
-    setArray([...array, "mundo"])
-    setArray(cat => [...cat, "sergio"])
+  const hendleAgregar = (onNewCategory) => {
+    setCategories([onNewCategory, ...categories])
+  
+console.log()
   }
   return (
-    <div>PegesProyecto
+    <div className='p-5 '>
+      <Categoris onNewCategory={(event: any) => hendleAgregar(event)} />
 
-      <button onClick={hendleAgregar}>Agregar</button>
-      {array.map((arr) => <p>{arr}</p>)}
-      {array}
+      {/* // setCategories={setCategories}  */}
+      
+
+      {categories.map((arr) => <p key={arr}>{arr}</p>)}
+
     </div>
   )
 }
 
-export default PegesProyecto
