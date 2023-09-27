@@ -9,7 +9,7 @@ export const Ejercicio2 = ({ value }) => {
     setContes(conten - 1);
   };
   const resed = () => {
-    setContes(value)
+    setContes(value);
   };
   return (
     <>
