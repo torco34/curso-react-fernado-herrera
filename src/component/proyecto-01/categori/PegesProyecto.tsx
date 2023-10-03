@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const PegesProyecto = ({ category }: Props) => {
-  const [categories, setCategories] = useState<string[]>(["titulo 1", "titulo2", "titulo 3"])
+  const [categories, setCategories] = useState<string[]>([''])
 
   //calmekey
   const handleAgregar = (onNewCategory: any) => {
@@ -24,7 +24,7 @@ export const PegesProyecto = ({ category }: Props) => {
       <Category onNewCategory={(event: any) => handleAgregar(event)} />
 
       {categories.map((category) => <GifGrid key={category} category={category} />)}
-      
+
     </div>
   )
 }
