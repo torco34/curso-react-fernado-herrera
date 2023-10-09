@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Category } from './Category'
-import { GifGrid } from './GifGrid'
+import { Category, GifGrid } from './categori'
 
-import { Menu } from '../Menu'
+
+import { Menu } from './Menu'
 interface Props {
   category: any;
 }
@@ -16,7 +16,7 @@ export const PegesProyecto = ({ category }: Props) => {
     if (categories.includes(onNewCategory)) return
     setCategories([onNewCategory, ...categories])
 
-    console.log()
+
   }
 
   return (
